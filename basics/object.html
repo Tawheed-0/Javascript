@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // objects are represented using curly brackets{}
+        // there are two ways to make objects
+
+
+        // 1. let emp= new object();
+
+        //2. let emp={};
+
+
+
+        // There are two ways of eccessing ptoperties of objiects 
+
+        // 1. emp.id;
+
+        // 2. emp['id'];    (Array like syntax)
+
+
+        // All the tags in html are converted into objects and all the atttributes of the tags are converted into the properties of that object.
+
+
+        // Similarly all the properties of CSS are converted into properties under style property in js that we can access by using camel case of the same property or array like syntax
+
+
+        // myDiv.style.backgroundColor='blue';
+                    // or
+        // myDiv.style['background-color']='blue';
+
+
+        let emp={
+            _id : 0,
+            _name: " ",
+            _isActive: true,
+            // showDetails:function (){
+            //     console.log(this.id);           //one type of writing functon
+            //     console.log(this.name);
+            //     console.log(this.isActive);
+            // },
+
+
+            // showDetails:()=>{
+            //     console.log(this.name);
+            //     console.log(this.id);     //Arrow function but this keyword cannot be used in the arrow fun
+            //     console.log(this.isActive);
+            // },
+
+            showDetails(){
+                console.log(this.name);
+                console.log(this.id);      //Classic way of writing function
+                console.log(this.isActive);
+            },
+            set id(id){
+                if(id>0)
+                this._id=id;
+            },
+            set name(name){             //examples of proper setters  or mutators  or write
+                
+                this._name=name;
+            },
+            set isActive(isActive){
+                
+                this._isActive=isActive;
+            },
+            get id(){
+                return this._id;
+            },
+            get name(){
+                return this._name;      //examples of proper getters  or accesors  or read
+            },
+            get isActive(){
+                return this._isActive;
+            },
+
+
+            //This process is known as encaptulasion mainly used in c++,java,c# and etc.
+        }
+        emp.id=2001;
+        emp.name="Tawheed";
+        emp.isActive=false;
+        emp.showDetails();
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+ Heap memory has no name.
+ Heap memory is accessed via stack by storing address of object in an variable on stack called as refrence variable.
+ Garbage collector concept. Do look over it at home.
+ heap is very large and also known as free store.
+ heap is dynamic.
+ Heap cannot be directly accessed.
+ 

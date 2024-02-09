@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <script>
+        let add = function (x,y)
+        {
+            let sum= x+y;
+            console.log(sum);
+        }
+
+        let sub= function (x,y)
+        {
+            let sub= x-y;
+            console.log(sub);
+        }
+
+
+        function clientFun(fun)
+        {
+            fun(100,50);
+        }
+        let x=101;
+        if(x==10)
+        {
+            clientFun(add);
+        }
+        else
+        {
+            clientFun(sub);
+        }
+
+    </script>
+</body>
+</html>

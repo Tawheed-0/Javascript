@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <style>
+        input{
+            display: block;
+            width: 60vw;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: bisque;
+            border-radius: 7px;
+            border: none;
+        }
+        button{
+            margin: 15px 25vw;
+            height: 10vh;
+            width: 10vw;
+            border-radius: 20px;
+            background-color: rgb(105, 212, 180);
+            border: none;
+        }
+        label{
+            color: rgb(58, 173, 211);
+        }
+        tr{
+            width: 70vw;
+            height: 10vh;
+            border: 1px solid;
+            /* text-align: left; */
+            text-align: center;
+            background-color: aqua;
+        }
+        td{
+            width: 60vw;
+            background-color: rgb(225, 34, 120);
+        }
+    </style>
+  </head>
+  <body>
+    <form action="" id="form">
+      <label for="">Name</label>
+      <input type="text" placeholder="Enter your name" id="name" />
+
+      <label for="">ID</label>
+      <input type="number" placeholder="Enter your ID" id="id" />
+
+      <label for="">Parentage</label>
+      <input type="text" placeholder="Parentage" id="parentage" />
+
+      <label for="">Address</label>
+      <input type="text" placeholder="Enter your Address" id="address" />
+    </form>
+    <button onclick="fun()">Submit</button>
+    <table>
+        <tr>
+          <th>Name</th>
+          <td id="tname"></td>
+        </tr>
+        <tr>
+          <th>ID</th>
+          <td id="tid"></td>
+        </tr>
+        <tr>
+          <th>Parentage</th>
+          <td id="tparentage"></td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td id="taddress"></td>
+        </tr>
+    </table>
+
+    <script>
+      const fun = function () {
+        let name = document.getElementById("name");
+        let id = document.getElementById("id");
+        let parentage = document.getElementById("parentage");
+        let address = document.getElementById("address");
+
+        let tname = document.getElementById("tname");
+        let tid = document.getElementById("tid");
+        let tparentage = document.getElementById("tparentage");
+        let taddress = document.getElementById("taddress");
+
+        tname.innerHTML=name.value;
+        tid.innerHTML=id.value;
+        tparentage.innerHTML=parentage.value;
+        taddress.innerHTML=address.value;
+      };
+    </script>
+  </body>
+</html>
