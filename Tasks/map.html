@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      table {
+        width: 50%;
+        border: 1px solid black;
+        background-color: chartreuse;
+      }
+      th {
+        height: 70px;
+        text-align: center;
+        padding: 15px;
+        
+      }
+      td {
+        text-align: center;
+        height: 50px;
+        padding: 15px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Name</td>
+          <td>Gender</td>
+          <td>Salary</td>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      let employees = [
+        {
+          id: 101,
+          name: "Tawheed",
+          gender: "male",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Ahmad",
+          gender: "male",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Furqan",
+          gender: "male",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Moomin",
+          gender: "male",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Sharib",
+          gender: "male",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Yamin",
+          gender: "male",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Huzaif",
+          gender: "male",
+          salary: 50000,
+        },
+      ];
+      let tbody = document.getElementById("tbody");
+      let trs = employees.map(
+        (employee) =>
+          ` <tr>
+                <td>${employee.id}</td>
+                <td>${employee.name}</td>
+                <td>${employee.gender}</td>
+                <td>${employee.salary}</td>
+            </tr>`
+      );
+      tbody.innerHTML = trs;
+    </script>
+  </body>
+</html>
