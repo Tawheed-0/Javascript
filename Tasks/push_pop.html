@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        div{
+            display: flex;
+            justify-content: space-around;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" placeholder="Enter your name" id="name" class="form-control">
+        <label for="id">ID</label>
+        <input type="text" placeholder="Enter your id" id="id" class="form-control">
+        <label for="salary">Salary</label>
+        <input type="text" placeholder="Enter your salary" id="salary" class="form-control">
+        <div class="text-center">
+            <button type="button" class="btn btn-info" onclick="push()">Push</button>
+            <button type="button" class="btn btn-success" onclick="unshift()">Unshift</button>
+            <button type="button" class="btn btn-danger" onclick="pop()">Pop</button>
+            <button type="button" class="btn btn-dark" onclick="shift()">Shift</button>
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>ID</td>
+                <td>Salary</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <script>
+        let name=document.getElementById("name");
+        let id=document.getElementById("id");
+        let salary=document.getElementById("salary");
+        let tbody = document.getElementById("tbody");
+        let employees=[];
+        function push()
+        {
+            let employee=` <tr>
+                <td>${name.value}</td>
+                <td>${id.value}</td>
+                <td>${salary.value}</td>
+            </tr>`
+            employees.push(employee);
+            tbody.innerHTML=employees;
+        }
+        function unshift()
+        {
+            let employee=` <tr>
+                <td>${name.value}</td>
+                <td>${id.value}</td>
+                <td>${salary.value}</td>
+            </tr>`
+            employees.unshift(employee);
+            tbody.innerHTML=employees;
+        }
+        function pop()
+        {
+            employees.pop();
+            tbody.innerHTML=employees;
+        }
+        function shift()
+        {
+            employees.shift();
+            tbody.innerHTML=employees;
+        }
+    </script>
+</body>
+</html>
