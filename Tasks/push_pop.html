@@ -41,40 +41,83 @@
         </tbody>
     </table>
     <script>
-        let name=document.getElementById("name");
-        let id=document.getElementById("id");
-        let salary=document.getElementById("salary");
         let tbody = document.getElementById("tbody");
-        let employees=[];
+        function getData(){
+            let id=document.getElementById("id").value;
+            let name=document.getElementById("name").value;
+            let salary=document.getElementById("salary").value;
+            let emp={id,name,salary}
+            return emp;
+        }
+        function load(){
+            let trs=employees.map((employee) =>
+          ` <tr>
+                <td>${employee.id}</td>
+                <td>${employee.name}</td>
+                <td>${employee.salary}</td>
+            </tr>`
+                );
+                tbody.innerHTML=trs;
+        }
+        let employees = [
+        {
+          id: 101,
+          name: "Tawheed",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Ahmad",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Furqan",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Moomin",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Sharib",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Yamin",
+          salary: 50000,
+        },
+        {
+          id: 101,
+          name: "Huzaif",
+          salary: 50000,
+        },
+      ];
+        load();
         function push()
         {
-            let employee=` <tr>
-                <td>${name.value}</td>
-                <td>${id.value}</td>
-                <td>${salary.value}</td>
-            </tr>`
-            employees.push(employee);
-            tbody.innerHTML=employees;
+            let emp=getData()
+            employees.push(emp); 
+            load();
         }
         function unshift()
         {
-            let employee=` <tr>
-                <td>${name.value}</td>
-                <td>${id.value}</td>
-                <td>${salary.value}</td>
-            </tr>`
-            employees.unshift(employee);
-            tbody.innerHTML=employees;
+            let emp=getData()
+            employees.unshift(emp);
+            load();
         }
         function pop()
         {
             employees.pop();
-            tbody.innerHTML=employees;
+           load();
         }
         function shift()
         {
             employees.shift();
-            tbody.innerHTML=employees;
+           load();
         }
     </script>
 </body>
