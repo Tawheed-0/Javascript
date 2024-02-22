@@ -1,27 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
+      // There are two ways to declare an array:-
+      // 1. let arr1=new Array();
 
-        // There are two ways to declare an array:-
-        // 1. let arr1=new Array();
+      // 2. let arr2=[];
 
-        // 2. let arr2=[];
+      // In other languages array can be static or dynamic.But in js there is no concept of static arrays .
+      // the default size can be given in 1st way of declaration .
 
-        // In other languages array can be static or dynamic.But in js there is no concept of static arrays .
-        // the default size can be given in 1st way of declaration .
+      // Also arrays in js are heterogenous i.e it can store different datatypes.
 
-        // Also arrays in js are heterogenous i.e it can store different datatypes.
+      // Arrays are Objects in js.
 
-        // Arrays are Objects in js.
+      // let arr=[];
+      // console.log(arr.length);  //length is a property of array objects.
 
-        let arr=[];
-        console.log(arr.length);  //length is a property of array objects.
+      // Now we will learn some functions of arrays
+
+      // 1.forof loop
+
+      // let arr=[1,2,3,5,6,8,10,34,67,33,568,224,33];
+      // for (const val of arr) {
+      //     console.log(val);
+      // }
+      // This loop is used to get the value without having any problem in length and no tension of increament ,decreament hence less errors
+
+      // 2. forin loop
+
+      // for (const index in arr) {
+      //         console.log(index);
+      // }
+
+      // This loop is used to get the index without having any problem in length and no tension of increament ,decreament hence less errors
+
+      // These two are loops not functions
+
+      // 3. forEach loop
+
+      // let arr=[1,2,3,5,6,8,10,34,67,33,568,224,33];
+      // arr.forEach((value,index,arr)=>{
+      //     console.log("value is" ,value);
+      //     console.log("index is" ,index);
+      //     console.log("full array is" ,arr);
+      // });
+
+      // This is a callback funtion i.e it takes function as parameter and its first parameter/Argument represents its value ,2nd represents its index and 3rd represents full array. It doesn't return anything
+
+      // 4.map
+
+      //   let arr = [1, 2, 3, 5, 6, 8, 10, 34, 67, 33, 568, 224, 33];
+      //   let res=arr.map((value, index, arr) => {
+      //     console.log("value is", value);
+      //     console.log("index is", index);
+      //     console.log("full array is", arr);
+      //     return value;
+      //   });
+      //   console.log(res);
+
+      // This is a callback funtion i.e it takes function as parameter and its first parameter/Argument represents its value ,2nd represents its index and 3rd represents full array. But the difference b/w foreach is that it always returns if we don't return anything undefined is returned.
+
+      //   5.push
+
+      //   let arr = [1, 2, 3, 5, 6, 8, 10, 34, 67, 33, 568, 224, 33];
+      //   arr.push(23,24,1,2121,12);
+      //   console.log(arr);
+
+      // This function is used to add elements at the end of the array we can add 1 element or more than 1 element .Even we can add another array or even object.
+
+      // 6.pop
+
+      // let arr = [1, 2, 3, 5, 6, 8, 10, 34, 67, 33, 568, 224, 33];
+      // arr.pop();
+
+      // This function is used to delete element at the end of the array
+
+      // 7.unshift
+
+      // let arr = [1, 2, 3, 5, 6, 8, 10, 34, 67, 33, 568, 224, 33];
+      // arr.unshift(23,53,32,22);
+
+      // This function is used to add elements at the beginnig of the array we can add 1 element or more than 1 element .Even we can add another array or even object.
+
+      // 8.shift
+
+      // let arr = [1, 2, 3, 5, 6, 8, 10, 34, 67, 33, 568, 224, 33];
+      // arr.shift();
+
+      // This function is used to delete element at the beginnig of the array
+
+      //   9.splice
+
+      // let arr = [1, 2, 3, 5, 6, 8, 10, 34, 67, 33, 568, 224, 33];
+      // arr.splice(2,3,78);
+
+      // This function is used to  add or delete element at nth position which is given as the first argument, 2nd argument is given as how many do u want to delete starting from the first argument and then third or all other arguments are given to add them
+
+
+    //   10. sort
+     
+        // let strings=['a','u','f','h','n'];
+        // strings.sort();
+        // console.log(strings);
+
+
+        // let names=['Tawheed', 'Yamin' ,'Furqan','Ahteeb','Ahmad', 'Huzaif'];
+        // names.sort();
+        // console.log(names);
+
+        // let arr=[1,2,3,4,5,6,7,8,9,0,12,45,6,7,43,45];
+        // arr.sort((a,b)=>a-b);
+        // console.log(arr);
+
+        // This sort function is used for sorting an array in case of chars and strings it works perfectly but for numbers higher than 9 it gets little problematic for that it takes Callback function in which it takes two parameters and while subtracting them if it gets +ve it swaps and it it gets -ve or 0 it doesn't swap that way it sorts the array
+
+
+        // and yes sort function changes the original function i.e it sorts the original function
+
+
+        // 11. reverse
+
+
+        // let strings=['a','u','f','h','n'];
+        // let names=['Tawheed', 'Yamin' ,'Furqan','Ahteeb','Ahmad', 'Huzaif'];
+        // let arr=[1,2,3,4,5,6,7,8,9,0,12,45,6,7,43,45];
+        // strings.reverse();
+        // names.reverse();
+        // arr.reverse();
+        // console.log(strings);
+        // console.log(names);
+        // console.log(arr);
+
+
+        // This function is used to reverse any array
+
+        // 12.find
+
+
+        let arr=[1,2,3,4,5,6,7,8,9,0,12,45,9,6,7,43,45];
+        let res=arr.find((val)=>{
+            if(val==9)
+            return 34;
+        })
+        console.log(res); 
     </script>
-</body>
+  </body>
 </html>
