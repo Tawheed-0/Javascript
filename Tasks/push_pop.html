@@ -119,6 +119,103 @@
             employees.shift();
            load();
         }
-    </script>
-</body>
-</html>
+
+
+
+        
+//     <script>
+//       let tbody = document.getElementById("tbody");
+//       let employees = [
+//         {
+//           id: 101,
+//           name: "Tawheed",
+//           salary: 50000,
+//         },
+//         {
+//           id: 102,
+//           name: "Ahmad",
+//           salary: 55000,
+//         },
+//         {
+//           id: 103,
+//           name: "Aynian",
+//           salary: 40000,
+//         },
+//         {
+//           id: 104,
+//           name: "Asmat",
+//           salary: 60000,
+//         },
+//         {
+//           id: 105,
+//           name: "Siaba",
+//           salary: 58000,
+//         },
+//         {
+//           id: 106,
+//           name: "Bilqees",
+//           salary: 59000,
+//         },
+//         {
+//           id: 107,
+//           name: "Tanzeela",
+//           salary: 61000,
+//         },
+//         {
+//           id: 108,
+//           name: "Ayat",
+//           salary: 58000,
+//         },
+//       ];
+//       let trs = employees.map(
+//         (employee) => `  <tr>
+//                                                             <td>${employee.id}</td>
+//                                                             <td>${employee.name}</td>
+//                                                             <td>${employee.salary}</td>
+//                                                   </tr>`
+//       );
+//       tbody.innerHTML = trs;
+
+
+
+//       function pushEmployee() {
+//         let emp = getData();
+//         employees.push(emp);
+//         trs.push(`  <tr>
+//                                                             <td>${emp.id}</td>
+//                                                             <td>${emp.name}</td>
+//                                                             <td>${emp.salary}</td>
+//                                                   </tr>`);
+//         tbody.innerHTML = trs;
+//         loadData();
+//       }
+
+//       function unshiftEmployee() {
+//         let emp = getData();
+//         employees.unshift(emp);
+//         loadData();
+//       }
+
+//       function spliceEmployee() {
+//         let emp = getData();
+//         // insert and remove at nth position
+//         //          let e1= {
+//         //                     id: 100000,
+//         //                     name: 'Taw ',
+//         //                     salary: 50000
+//         //           }
+//         employees.splice(5, 3);
+//         loadData();
+//       }
+
+//       function getData() {
+//         let id = document.getElementById("id").value;
+//         let name = document.getElementById("name").value;
+//         let salary = document.getElementById("salary").value;
+//         let emp = { id, name, salary };
+//         return emp;
+//       }
+
+  </script>
+ </body>
+ </html>
