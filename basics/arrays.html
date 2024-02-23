@@ -102,53 +102,53 @@
 
       // This function is used to  add or delete element at nth position which is given as the first argument, 2nd argument is given as how many do u want to delete starting from the first argument and then third or all other arguments are given to add them
 
+      //   10. sort
 
-    //   10. sort
-     
-        // let strings=['a','u','f','h','n'];
-        // strings.sort();
-        // console.log(strings);
+      // let strings=['a','u','f','h','n'];
+      // strings.sort();
+      // console.log(strings);
 
+      // let names=['Tawheed', 'Yamin' ,'Furqan','Ahteeb','Ahmad', 'Huzaif'];
+      // names.sort();
+      // console.log(names);
 
-        // let names=['Tawheed', 'Yamin' ,'Furqan','Ahteeb','Ahmad', 'Huzaif'];
-        // names.sort();
-        // console.log(names);
+      // let arr=[1,2,3,4,5,6,7,8,9,0,12,45,6,7,43,45];
+      // arr.sort((a,b)=>a-b);
+      // console.log(arr);
 
-        // let arr=[1,2,3,4,5,6,7,8,9,0,12,45,6,7,43,45];
-        // arr.sort((a,b)=>a-b);
-        // console.log(arr);
+      // This sort function is used for sorting an array in case of chars and strings it works perfectly but for numbers higher than 9 it gets little problematic for that it takes Callback function in which it takes two parameters and while subtracting them if it gets +ve it swaps and it it gets -ve or 0 it doesn't swap that way it sorts the array
 
-        // This sort function is used for sorting an array in case of chars and strings it works perfectly but for numbers higher than 9 it gets little problematic for that it takes Callback function in which it takes two parameters and while subtracting them if it gets +ve it swaps and it it gets -ve or 0 it doesn't swap that way it sorts the array
+      // and yes sort function changes the original function i.e it sorts the original function
 
+      // 11. reverse
 
-        // and yes sort function changes the original function i.e it sorts the original function
+      // let strings=['a','u','f','h','n'];
+      // let names=['Tawheed', 'Yamin' ,'Furqan','Ahteeb','Ahmad', 'Huzaif'];
+      // let arr=[1,2,3,4,5,6,7,8,9,0,12,45,6,7,43,45];
+      // strings.reverse();
+      // names.reverse();
+      // arr.reverse();
+      // console.log(strings);
+      // console.log(names);
+      // console.log(arr);
 
+      // This function is used to reverse any array
 
-        // 11. reverse
+      // 12.find
 
+      // let arr=[1,2,3,4,5,6,7,8,9,0,12,45,9,6,7,43,45];
+      // let res=arr.find((val)=>val==9)
+      // console.log(res);
 
-        // let strings=['a','u','f','h','n'];
-        // let names=['Tawheed', 'Yamin' ,'Furqan','Ahteeb','Ahmad', 'Huzaif'];
-        // let arr=[1,2,3,4,5,6,7,8,9,0,12,45,6,7,43,45];
-        // strings.reverse();
-        // names.reverse();
-        // arr.reverse();
-        // console.log(strings);
-        // console.log(names);
-        // console.log(arr);
+      // This function is used for searching process but it only returns 1 value wherever it finds the key it returns the nothing else can be returned and it stops the process right there even if there are multiple copies of that elmement there it only returns the first one and returns back. It is a callback function .
 
+      // 13. filter
 
-        // This function is used to reverse any array
+      // let arr=[1,9,3,4,9,6,7,8,9,0,12,45,9,6,7,43,45];
+      // let res=arr.filter((val)=>val==9);
+      // console.log(res);
 
-        // 12.find
-
-
-        let arr=[1,2,3,4,5,6,7,8,9,0,12,45,9,6,7,43,45];
-        let res=arr.find((val)=>{
-            if(val==9)
-            return 34;
-        })
-        console.log(res); 
+      // This function works in the similar fashion as that of find but it doesn't stop where it finds the key instead it countinues to search if there are more elements like that and returns all the elements which are similar to key. It is callback function as well.More oftenly used than find function.
     </script>
   </body>
 </html>
