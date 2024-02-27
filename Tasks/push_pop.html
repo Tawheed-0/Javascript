@@ -130,22 +130,18 @@
         function startsearch()
         {
           let key = searchinfo();
-          let searchedData=employees.filter((val)=>{
-            if(key==val.name)
-            {
-                  return val;
-            }
-          });
-          let newTrs=[];
-          searchedData.forEach((val)=>{
-            newTrs.push(` <tr>
-                <td>${val.id}</td>
-                <td>${val.name}</td>
-                <td>${val.salary}</td>
-            </tr>`)
-          });
-          tbody.innerHTML=newTrs;
+          let searchedData=employees.filter((val)=>key==val.name);
+          searchedDataLoad(searchedData);
         }
+        function searchedDataLoad(searchedData)
+        {     
+          let newTrs=searchedData.map((val)=>` <tr>
+                  <td>${val.id}</td>
+                  <td>${val.name}</td>
+                  <td>${val.salary}</td>
+              </tr>`);
+            tbody.innerHTML=newTrs;
+          }
 
 
 
