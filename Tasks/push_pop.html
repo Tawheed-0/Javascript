@@ -129,8 +129,8 @@
         }
         function startsearch()
         {
-          let key = searchinfo();
-          let searchedData=employees.filter((val)=>key==val.name);
+          let key = searchinfo().toLowerCase();
+          let searchedData=employees.filter(val=>val.name.toLowerCase().startsWith(key));
           searchedDataLoad(searchedData);
         }
         function searchedDataLoad(searchedData)
