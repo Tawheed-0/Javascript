@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <form action="">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <button type="button" onclick="split()">Submit</button>
+        <div id="div"></div>
+    </form>
+    <script>
+        function split(){
+            let email=document.getElementById("email").value;
+            let div=document.getElementById("div");
+            let ind=email.indexOf('@');
+            let lastind=email.lastIndexOf('.');
+            let emailSection=email.substring(0,ind);
+            let domain=email.substring(ind+1,lastind);
+            let topLevelDomain=email.substring(lastind);
+            div.innerHTML=`
+            <P>
+                <span>Email :-</span>
+                <span>${emailSection}</span>
+            </p>
+            <P>
+                <span>Domain :-</span>
+                <span>${domain}</span>
+            </p>
+            <P>
+                <span>Top Level Domain :-</span>
+                <span>${topLevelDomain}</span>
+            </p>
+                `;
+
+
+        }
+    </script>
+</body>
+</html>
