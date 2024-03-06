@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <!-- <button id="btn"></button> -->
+
+    <input type="text" placeholder="Enter anything" class="txt">
+    <input type="text" placeholder="Enter anything" class="txt">
+    <input type="text" placeholder="Enter anything" class="txt">
+    <input type="text" placeholder="Enter anything" class="txt">
+    <input type="text" placeholder="Enter anything" class="txt">
+    <input type="text" placeholder="Enter anything" >
+    <div id="div"></div>
+    <script>
+
+        // Event Handling works on the publish subscriber modal in which there is a event generator like button here who generates events like click then we have subscriber or event handler or event listner or participant who is generated or who has subscribed or participated who is eagerly listening when he will be called and then at last we have subscription i.e contract b/w publisher and subscriber like we all have in daily life like subscripting to netflix and many more
+
+        
+        let txt=document.getElementsByTagName("input");
+        console.log(txt);
+        txt[2].onkeydown=function(){
+            div.innerHTML=this.value;
+        }
+
+    </script>
+</body>
+</html>
