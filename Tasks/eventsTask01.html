@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer</title>
+</head>
+<style>
+    div{
+        background-color: blue;
+        height: 255px;
+        width: 255px;
+        margin-top: 10px;
+    }
+    input{
+        display: block;
+    }
+</style>
+<body>
+    <label for="">For r</label>
+    <input type="text">
+    <label for="">For g</label>
+    <input type="text">
+    <label for="">For b</label>
+    <input type="text">
+    <div></div>
+</body>
+<script>
+    let inputs=document.querySelectorAll("input");
+    let div=document.querySelector("div");
+    let r=255;
+    let g=255;
+    let b=255;
+    inputs[0].onkeyup=function (e){
+        r=e.target.value;
+        div.style.backgroundColor=`rgb(${r},${g},${b})`
+    }
+    inputs[1].onkeyup=function (e){
+        g=e.target.value;
+        div.style.backgroundColor=`rgb(${r},${g},${b})`
+    }
+    inputs[2].onkeyup=function (e){
+        b=e.target.value;
+        div.style.backgroundColor=`rgb(${r},${g},${b})`
+    }
+</script>
+</html>

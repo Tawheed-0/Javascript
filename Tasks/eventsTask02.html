@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer</title>
+</head>
+<style>
+    div{
+        background-color: blue;
+        height: 255px;
+        width: 255px;
+        margin-top: 10px;
+    }
+    input{
+        display: block;
+    }
+</style>
+<body>
+    <div></div>
+</body>
+<script>
+    let div=document.querySelector("div");
+    div.onmousemove=function (e){
+        div.style.backgroundColor=`rgb(${e.clientX},${e.clientY},0)`;
+    }
+    div.onmouseout=function (e){
+        div.style.backgroundColor=`pink`;
+    }
+</script>
+</html>

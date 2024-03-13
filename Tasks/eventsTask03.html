@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <style>
+    p{
+        text-align: center;
+        color: red;;
+    }
+  </style>
+</head>
+
+<body>
+    <label for="search">Search</label>
+    <input type="text" placeholder="Search By Name" id="search" class="form-control" />
+    <div>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>ID</td>
+        <td>Salary</td>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+  <script>
+     let search=document.getElementById("search");
+    let tbody=document.querySelector("tbody");
+    function load() {
+        
+      let trs = employees.map(
+        (employee) =>
+          ` <tr>
+                <td>${employee.id}</td>
+                <td>${employee.name}</td>
+                <td>${employee.salary}</td>
+            </tr>`
+      );
+      tbody.innerHTML = trs;
+    }
+    let employees = [
+      {
+        id: 101,
+        name: "Ahteeb",
+        salary: 50000,
+      },
+      {
+        id: 101,
+        name: "Ahmad",
+        salary: 50000,
+      },
+      {
+        id: 101,
+        name: "Furqan",
+        salary: 50000,
+      },
+      {
+        id: 101,
+        name: "Moomin",
+        salary: 50000,
+      },
+      {
+        id: 101,
+        name: "Sharib",
+        salary: 50000,
+      },
+      {
+        id: 101,
+        name: "Yamin",
+        salary: 50000,
+      },
+      {
+        id: 101,
+        name: "Huzaif",
+        salary: 50000,
+      },
+    ];
+    load();
+   
+    search.onkeyup=function(e){
+        if(e.keyCode==13 && this.value!="")
+        {
+      let key = this.value.toLowerCase();
+      let searchedData = employees.filter((val) =>
+        val.name.toLowerCase().startsWith(key)
+      );
+      if(searchedData.length==0)
+      {
+        tbody.innerHTML=`<p>No Data Found</p>`
+      }
+      else{
+        searchedDataLoad(searchedData);
+      }
+    }
+    if(e.keyCode==8 && this.value=="")
+    {
+        load();
+    }
+}
+    function searchedDataLoad(searchedData) {
+      let newTrs = searchedData.map(
+        (val) => ` <tr>
+                  <td>${val.id}</td>
+                  <td>${val.name}</td>
+                  <td>${val.salary}</td>
+              </tr>`
+      )
+      tbody.innerHTML = newTrs;
+     }
+     </script>
+     </body>
+</html>
