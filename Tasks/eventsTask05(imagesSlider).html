@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images slider</title>
+    <style>
+        #images{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .imgs{
+            display: inline-block;
+            width: 100px;height: 100px;
+        }
+        #screen{
+            width: 400px;
+            height: 350px;
+            background-color: black;
+        }
+        #screen img{
+            width: 400px;
+            height: 350px;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        #btnDiv{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <div id="screen">
+            <img src="images/image1.jpg" alt="" id="scrimg">
+        </div>
+    </div>
+    <div id="images">
+        <img src="images/image1.jpg" alt="" class="imgs">
+        <img src="images/image2.jpg" alt="" class="imgs">
+        <img src="images/image3.jpg" alt="" class="imgs">
+        <img src="images/image4.jpg" alt="" class="imgs">
+        <img src="images/image5.jpg" alt="" class="imgs">
+    </div>
+    <div id="btnDiv">
+        <button type="button">Next</button>
+        <button type="button">previous</button>
+    </div>
+    <script>
+        
+        let images=document.querySelectorAll(".imgs");
+        function getSrcs()
+        {
+            let arr=[];
+            let key;
+            for (const i of images) {
+                key=i.getAttribute('src');
+                arr.push(key);
+            }
+            return arr;
+        }
+        let addresses=getSrcs();
+        let screen=document.querySelector("#scrimg");
+        let btns=document.querySelectorAll("button");
+        let i=0;
+        btns[0].addEventListener('click',function(e){
+            i++;
+            if(i>4)
+            {
+                i=0;
+            }
+            screen.src=addresses[i];
+        })
+        btns[1].addEventListener('click',function(e){
+            i--;
+            if(i<0)
+            {
+                i=4;
+            }
+            screen.src=addresses[i];
+        })
+        
+        
+
+    </script>
+</body>
+
+</html>
