@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images slider</title>
+    <style>
+        #images{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .imgs{
+            display: inline-block;
+            width: 100px;height: 100px;
+        }
+        #screen{
+            width: 400px;
+            height: 350px;
+            background-color: black;
+        }
+        #scrimg{
+            width: 400px;
+            height: 350px;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <div class="screen">
+            <img src="images/image1.jpg" alt="" id="scrimg">
+        </div>
+    </div>
+    <div id="images">
+        <img src="images/image1.jpg" alt="" class="imgs">
+        <img src="images/image2.jpg" alt="" class="imgs">
+        <img src="images/image3.jpg" alt="" class="imgs">
+        <img src="images/image4.jpg" alt="" class="imgs">
+        <img src="images/image5.jpg" alt="" class="imgs">
+    </div>
+    <script>
+        let images=document.querySelector("#images");
+        let screen=document.querySelector("#scrimg");
+        images.addEventListener('click',function(e){
+            if(e.target.tagName=='IMG'){
+            screen.src=e.target.src;
+            }
+        })
+    </script>
+</body>
+
+</html>

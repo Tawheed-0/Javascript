@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Deligation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <style>
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            border: 1px solid olivedrab;
+            border-radius: 20px;
+            padding: 5px 12px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">
+        <button id="btn" type="button">Load Data</button>
+    </div>
+    <table class="table">
+        <thead id="thead">
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <script>
+        let thead=document.querySelector('#thead');
+        let tbody=document.querySelector('#tbody');
+        let btn=document.querySelector('#btn');
+        let students=[
+            {
+                name:"Tawheed",
+                id:101,
+                Gender:'Male',
+                address:'Barzulla'
+            },
+            {
+                name:"Furqaan",
+                id:102,
+                Gender:'Male',
+                address:'Barzulla'
+            },
+            {
+                name:"Huzaif",
+                id:103,
+                Gender:'Male',
+                address:'Barzulla'
+            },
+            {
+                name:"Yamin",
+                id:104,
+                Gender:'Male',
+                address:'Barzulla'
+            },
+            {
+                name:"Ateeb",
+                id:105,
+                Gender:'Male',
+                address:'Barzulla'
+            }
+        ]
+        btn.addEventListener('click',function(e){
+            thead.innerHTML=`<tr>
+            <td>Name</td>
+            <td>Id</td>
+            <td>Gender</td>
+            <td>Address</td>
+            <td>Action</td>
+        </tr>`
+        let trs=getTrs();
+        tbody.innerHTML=trs;
+        })
+        let getTrs=function(){
+            let trs=students.map(val=>` <tr>
+                <td>${val.name}</td>
+                <td>${val.id}</td>
+                <td>${val.Gender}</td>
+                <td>${val.address}</td>
+                <td><button type="button">Delete</button></td>
+            </tr>`)
+            return trs;
+        }
+        tbody.addEventListener('click',function(e){
+            if (e.target.tagName == 'BUTTON'){
+            let tr=e.target.parentElement.parentElement;
+            tr.style.display='none';
+            }
+        })
+    </script>
+</body>
+</html>
