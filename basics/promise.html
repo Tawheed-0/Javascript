@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+        let isTires=true;
+        let prom=new Promise(function(resolve,rejected){
+            if(!isTires){
+                resolve("Everything OK");
+            }
+            else{
+                rejected("nothing OK");
+            }
+        });
+        prom.then(function(data){
+            console.log(data);
+        }).catch(function(data){
+            console.error(data);
+        })
+
+        // The above is an example of promise which is a very important topic of the js which is mainly target the server these promises works on three main situations that are mentioned below:-
+        // 1.pending.
+        // 2.fulfilled.
+        // 3.rejected.
+
+        // the meaning can be understood by the name itself using the promise like above we have to first declare the promise using new keyword after that inside the promise we have an function known as executer which takes two callback funs as a parameter where the first one is resolve and the second one is rejected then inside the body we can write any of our logic where either the first paramater will be called or the second para will be called.
+
+        // following that we have two more functions available on the variable/object we have stored the promise that are:-
+        // 1.catch 
+        // 2.then
+
+        // if the resolve function is called then the then() function will be called automatically passing the data given in the resolve function to the then function and if the rejected function is called then the catch() function will be called automatically passing the data given in the rejected function to the catch function.
+
+    </script>
+</body>
+</html>

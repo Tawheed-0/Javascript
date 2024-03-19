@@ -1,0 +1,37 @@
+[
+    {
+        "name":"Tawheed",
+        "id":101,
+        "salary":50000
+    },
+    {
+        "name":"Yamin",
+        "id":101,
+        "salary":50000
+    },
+    {
+        "name":"Huzaif",
+        "id":101,
+        "salary":50000
+    },
+    {
+        "name":"Tawheed",
+        "id":101,
+        "salary":50000
+    },
+    {
+        "name":"Owais",
+        "id":101,
+        "salary":50000
+    },
+    {
+        "name":"Feroz",
+        "id":101,
+        "salary":50000
+    },
+    {
+        "name":"Rahil",
+        "id":101,
+        "salary":50000
+    }
+]
