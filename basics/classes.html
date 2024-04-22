@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+    <script>
+        class employee{
+            constructor(id,name,address){
+                this.id=id;
+                this.name=name;
+                this.address=address;
+            }
+            showDetails() {
+                console.log(this.id);
+                console.log(this.name);
+                console.log(this.address);
+            }
+        }
+        class pEmp extends employee{
+            constructor(id,name,address,salary){
+                super(id,name,address);
+                this.salary=salary;
+            }
+            showDetails(){
+                super.showDetails();
+                console.log(this.salary);
+            }
+        }
+        let emp=new pEmp(191,"Tawheed","Barzulla",50000);
+        emp.showDetails();
+
+    </script>
+</body>
+</html>
