@@ -9,14 +9,16 @@
             width: 60vw;
             margin: 20px;
         }
+
     </style>
 </head>
 <body>
 
     <form action="">
-        <input type="text" placeholder="Enter Your name" id="name">
+        <input type="text" placeholder="Enter Your name" >
         <input type="number" placeholder="Enter your id" id="id">
-        <input type="number" placeholder="Enter your salary" id="salary">
+        <input type="number" placeholder="Enter your salary">
+        <button type="button" onclick="fun()">click</button>
     </form>
 
     <table>
@@ -34,14 +36,19 @@
    
 
     <script>
-        let name=document.getElementById(name);
-        let id=document.getElementById(id);
-        let salary=document.getElementById(salary);
+       
+      
+        let id=document.querySelector("#id");
+      function fun(){
+        id.value=10001
+      }
+        // let salary=document.getElementById(salary);
 
 
-        let tdName=document.getElementById(tdName);
-        let tdId=document.getElementById(tdId);
-        let tdSalary=document.getElementById(tdSalary);
+        // let tdName=document.getElementById(tdName);
+        // let tdId=document.getElementById(tdId);
+        // let tdSalary=document.getElementById(tdSalary);
+
 
     
     </script>
